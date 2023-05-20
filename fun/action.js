@@ -8,22 +8,18 @@ const regularQueue = new Queue();
 //whether he is arrived or left
 //if arrived, only one line will be executed and that would be the Queue process
 
-//second constraint -> the basis of serving is the type of the client
-//if VIP, then the VIP stack will be served
-//if regular, then the regular queue will be served
-
 export const lineUp = (name, type, isSupervisorPresent) => {
 	//served. All regular or VIP clients line up in
 	//the queue if the supervisor is present.
 	if (isSupervisorPresent) {
 		regularQueue.enqueue(name);
+	} else {
 		//If the supervisor is not in the office, it determines where a client lines
 		//up. If the client is a regular client, then this client lines up at the RegularQueue. If the client is a VIP client,
 		//then the client is pushed into the VIPStack.
-	} else {
 		if (type === "VIP") {
 			vipStack.push(name);
-			console.log(`VIP client ${name} lines up at VIPStack`);
+			console.log(`VIP client ${name} lines up at`);
 		} else {
 			regularQueue.enqueue(name);
 			console.log(`Regular client ${name} lines up at RegularQueue`);
@@ -44,24 +40,28 @@ export const serve = (isSupervisorPresent) => {
 			console.log(`Now serving ${regularQueue.dequeue()} from RegularQueue`);
 		}
 	} else {
-		// Serve VIP clients from VIPStack
+		// Serve VIP clients from VIPStack first
 		if (!vipStack.isEmpty()) {
 			console.log(`Now serving ${vipStack.pop()} from VIPStack`);
 		} else if (!regularQueue.isEmpty()) {
 			console.log(`Now serving ${regularQueue.dequeue()} from RegularQueue`);
-		} else {
+		} else if (regularQueue.isEmpty()) {
 			console.log("RegularQueue empty");
+		} else {
+			console.log("VIPStack empty");
 		}
 	}
 };
 
-//third constraint -> the basis of supervisor is the arrival of the supervisor
+//third constraint -> the basis of the behaviour of the line up is the arrival of the supervisor
 /* 
 When a supervisor arrives and
 the VIP stack has contents, pop them off and enqueue them onto the regular queue in the popped order.
 CorruptQueue RegularQueue VIPStack
+
 Once the VIP client is in the regular queue, the client never transfers to the VIP stack, even when the
-supervisor leaves.*/
+supervisor leaves.
+*/
 export const supervisorArrived = (isSupervisorPresent) => {
 	isSupervisorPresent = true;
 	console.log("Supervisor present");

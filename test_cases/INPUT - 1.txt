@@ -1,4 +1,4 @@
-lineup,John,regular
+lineup,John,regular 
 lineup,Bob,regular
 lineup,Tom,regular
 lineup,Sarah,VIP
