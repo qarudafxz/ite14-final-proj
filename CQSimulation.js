@@ -13,10 +13,10 @@ const corruptOffice = async () => {
 		const data = await checkClients();
 		const lines = data.toString().split("\n");
 
-		//optimize
-		//Time complexity -> O(n)
-		//Space complexity -> O(n)
-		//#1 step -> separate clients based on their types
+		// //optimize
+		// //Time complexity -> O(n)
+		// //Space complexity -> O(n)
+		// //#1 step -> separate clients based on their types
 		for (let i = 0; i < lines.length; i++) {
 			const [action, ...args] = lines[i].split(",");
 			const [name, type] = args.map((arg) => arg.trim());

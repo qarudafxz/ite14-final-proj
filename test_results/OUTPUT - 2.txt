@@ -1,0 +1,33 @@
+Regular client Jan Galang lines up at RegularQueue
+VIP client Stephen Ong lines up at VIPStack
+VIP client Queen Alandy Dy lines up at VIPStack
+VIP client Leontine Sarmiento lines up at VIPStack
+Now serving Leontine Sarmiento from VIPStack
+Now serving Queen Alandy Dy from VIPStack
+Now serving Stephen Ong from VIPStack
+VIP client Reynolds Tan lines up at VIPStack
+VIP client Karlo Banzuela lines up at VIPStack
+Supervisor present
+Now serving Jan Galang from RegularQueue
+Supervisor not here
+VIP client Luis Gaza lines up at VIPStack
+Regular client Eunice Tsai lines up at RegularQueue
+Now serving Luis Gaza from VIPStack
+VIP client Justine Salagubang lines up at VIPStack
+VIP client Christin Espinosa lines up at VIPStack
+Now serving Christin Espinosa from VIPStack
+Now serving Justine Salagubang from VIPStack
+Now serving Karlo Banzuela from RegularQueue
+Now serving Reynolds Tan from RegularQueue
+VIP client Alvin Santos lines up at VIPStack
+Regular client Jejomar Dimayuga lines up at RegularQueue
+Supervisor present
+Now serving Eunice Tsai from RegularQueue
+Now serving Jejomar Dimayuga from RegularQueue
+Now serving Alvin Santos from RegularQueue
+Regular client Joana Tan lines up at RegularQueue
+VIP client Dorothy Yu lines up at RegularQueue
+Now serving Joana Tan from RegularQueue
+Supervisor not here
+Now serving Dorothy Yu from RegularQueue
+RegularQueue empty
